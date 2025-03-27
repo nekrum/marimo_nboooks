@@ -83,11 +83,11 @@ def _(df, mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(alt, df, mo):
     _chart = (
         alt.Chart(df)
-        .mark_circle()
+        .mark_circle(size=80)
         .encode(
             x="Screen Time Type",
             y="Average Screen Time (hours)",
