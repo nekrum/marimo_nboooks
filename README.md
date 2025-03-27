@@ -1,14 +1,21 @@
 # Marimo NoteBoooks
 
-Pruebas con marimo como remplazo de jupyter notebook
+Pruebas con marimo como remplazo de jupyter notebook. Analisis Exploratorios y
+pruebas de capacidades.
 
-[!Note]: Cada proyecto tiene su propio ambiente, una vez descargado el
-repositorio se puede instalar mediante [uv](https://docs.astral.sh/uv/)
+> [!NOTE]
+> Cada proyecto tiene su propio ambiente, una vez descargado el
+> repositorio se puede instalar mediante [uv](https://docs.astral.sh/uv/)
+
 
 Se necesita entonces:
 
 1. Instalar Python
 2. Instalar gestor de paquete UV (OPCIONAL)
+
+> [!IMPORTANT]
+> Esta no es una guía general de instalación de marimo solo un atajo para
+> ejecutar los **NoteBooks** en local.
 
 ## 1. Instalar Python
 
@@ -98,16 +105,34 @@ y mantener las dependencias del paquete.
 [En la pagina del instalador](https://docs.astral.sh/uv/configuration/installer/)  
 explican y proporcionan un comando que logra instalarlo en cuestion de minutos.
 
-> [!NOTE] ¿Porque UV? es un manejador de paquetes muy rapido y es una
+#### Windows
+
+Resumiendo para Windows en una terminal:
+
+```
+powershell -ExecutionPolicy ByPass -c {$env:UV_INSTALL_DIR = "C:\Custom\Path";irm https://astral.sh/uv/install.ps1 | iex}
+
+```
+
+### Linux/macOS
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/custom/path" sh
+```
+
+> [!NOTE] ¿Porque UV? 
+> Es un manejador de paquetes muy rapido y es una
 > alternativa robusta a  pip, el instalador base de Python. Ademas es mas
 > rápido que Poetry, Hatch, PDM y Rye... y aunque no maneja también como pdm la
 > creación de paquetes de python. Si que es buen remplazo para pip y pipenv.
+> Ademas es el unico que maneja **sandbox** lo que permite instalar los paquetes
+> necesarios para el **notebook** de forma automática.
 
 
 ### ATAJO para correr el Notebook
 
-En este punto con UV instalado se puede correr de manera directa el **NoteBook**
-solo tienes que crear un directorio o carpeta y dentro de ella abrit una
+Con UV instalado se puede correr de manera directa el **NoteBook**
+solo tienes que crear un directorio o carpeta y dentro de ella abrir una
 terminal de Winows, Linux o macOS. Dentro de la carpeta ejecutar los siguientes
 comandos:
 
@@ -119,32 +144,18 @@ uv run marimo --sandbox editor <URL raw del notebook>
 
 ```
 
-Esto usara el notebok, lo abrira e instalará las dependencias necesarias. Si
-decides ejectuar esta opción puedes saltarte a hasta la sección de comandos para
-cada uno de los **Notebooks**.
-
+Esto usara el notebok, lo abrira e instalará las dependencias necesarias.
 
 >[!IMPORTANT]
-> No es necesario instalar UV, se puede instalar **marimo** sin problema
-> alguno con `pip install marimo`. Pero es recomendable **uv** ya que es el
-> unico que usa sandobox e instala automáticamente las librerías necesarias para
-> el notebook. Ademas usa por default ambientes de python.
-
-## Método manual
-
-En caso de quere seguir un método mas ortodoxo, necesitamos descargar el repositorio
-y si queremos no usar UV, con solo instalar marimo con pip o cualquier otro
-gestor podemo usar
-
-```bash
-marimo edit
-```
-
-En el directorio de cualquier análisis y el mismo notebook nos pedira instalar
-los paquetes para lo que hara uso de pip de forma automática.
+> UV no es la única forma de instalar/ejecutar marimo, se puede instalar 
+> **marimo** para todo el sistema con `pip install marimo`. Aunque es recomendable 
+> usar ambientes  para un mejor manejo de dependencias. Esto se puede hacer con
+> el mismo pip dentro de un ambiente o usando otros manejadores de paquetes.
+> Incluso marimo permite el uso de docker para ejecutar un ambiente especifico
+> pero esto sale del alcance de este readme.
 
 
-## Comando de ejecución de Notebook
+## Comandos de ejecución de Notebook
 
 -  Child Screen Time
 
