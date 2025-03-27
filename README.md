@@ -11,7 +11,7 @@ pruebas de capacidades.
 Se necesita entonces:
 
 1. Instalar Python
-2. Instalar gestor de paquete UV (OPCIONAL)
+2. Instalar gestor de paquete UV 
 
 > [!IMPORTANT]
 > Esta no es una guía general de instalación de marimo solo un atajo para
@@ -99,11 +99,11 @@ terceros.
 ## 2. Instalar gestor de paquetes UV    
 
 **uv** es un instalador de paquetes muy rápido y disponible para Linux, macOS y
-Windows. Esta creado en rust o y hace un gran trabajo al instalar
-y mantener las dependencias del paquete.
+Windows. Esta creado en rust y hace un gran trabajo al instalar
+y mantener las dependencias de paquetes.
 
-[En la pagina del instalador](https://docs.astral.sh/uv/configuration/installer/)  
-explican y proporcionan un comando que logra instalarlo en cuestion de minutos.
+[En la pagina del instalador](https://docs.astral.sh/uv/configuration/installer/) explican 
+y proporcionan un comando que logra instalarlo en cuestion de minutos.
 
 #### Windows
 
@@ -120,8 +120,8 @@ powershell -ExecutionPolicy ByPass -c {$env:UV_INSTALL_DIR = "C:\Custom\Path";ir
 curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR="/custom/path" sh
 ```
 
-> [!NOTE] ¿Porque UV? 
-> Es un manejador de paquetes muy rapido y es una
+> [!NOTE]
+> ¿Porque UV? Es un manejador de paquetes muy rapido y es una
 > alternativa robusta a  pip, el instalador base de Python. Ademas es mas
 > rápido que Poetry, Hatch, PDM y Rye... y aunque no maneja también como pdm la
 > creación de paquetes de python. Si que es buen remplazo para pip y pipenv.
