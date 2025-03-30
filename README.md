@@ -160,5 +160,6 @@ Esto usara el notebok, lo abrira e instalará las dependencias necesarias.
 -  Child Screen Time
 
 ```bash
-uv run marimo editor --sandbox https://raw.githubusercontent.com/nekrum/marimo_nboooks/refs/heads/main/child_screen/ChildScreenTime.py
+mkdir data # Crea el directorio donde se guardan los datos
+uv run marimo edit --sandbox https://raw.githubusercontent.com/nekrum/marimo_nboooks/refs/heads/main/child_screen/ChildScreenTime.py
 ```
