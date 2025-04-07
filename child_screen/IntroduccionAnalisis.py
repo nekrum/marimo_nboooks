@@ -166,10 +166,7 @@ def _(mo):
         ```
         {mo.callout("Con este código se **generan variables** que usaras en los siguientes ejemplos, no olvides generarlas antes que el resto", kind="warn")}
         """
-    
     )
-
-
     return
 
 
